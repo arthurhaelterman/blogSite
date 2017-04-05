@@ -1,0 +1,18 @@
+{
+  "blogs": [
+    {
+      "title": "My Story",
+      "text": "Lorem Ipsum",
+      "categories": [
+        "life","death","meaning"
+      ]
+    },
+    {
+      "title": "Eating Healthy",
+      "text": "Lorem Ipsum",
+      "categories": [
+        "food","obesity","fit","imsohipster"
+      ]
+    }
+  ]
+}
