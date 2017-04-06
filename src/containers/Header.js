@@ -24,12 +24,11 @@ class Header extends Component {
                             </Nav>
                             <Nav pullRight>
                                 <NavItem eventKey={1} href="#">Link Right</NavItem>
-                                <NavItem eventKey={2} href="#"><FormGroup>
+                                <NavItem eventKey={2} href="#">
                                     <FormControl type="text" placeholder="Search" />
-                                </FormGroup></NavItem>
+                                </NavItem>
                             </Nav>
                         </Navbar.Collapse>
-                    );
                 </Navbar>
         );
     }
