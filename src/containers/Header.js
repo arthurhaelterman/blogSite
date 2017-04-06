@@ -28,8 +28,8 @@ class Header extends Component {
                             </Nav>
                             <Nav pullRight>
                                 <NavItem eventKey={1} href="#" id="mijnaccountknop">
-                                    <button type="button">
-                                        <img src={accounticoon}></img>My account</button>
+                                    <Button>
+                                        <img src={accounticoon}></img>Log in</Button>
                                     </NavItem>
                                 <NavItem eventKey={2} href="#">
                                     <FormGroup>

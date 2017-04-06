@@ -4,7 +4,7 @@ import BlogList from './containers/BlogList'
 import * as JsonService from "./service/JsonService";
 import Header from './containers/Header';
 import SlideImages from './containers/SlideImages';
-
+import Welcome from './containers/Welcome';
 
 
 
@@ -23,10 +23,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Header/>
+        <Header/>
         <SlideImages/>
+        <Welcome/>
         <BlogList load={this.load.bind(this)} blogs={this.state.blogs}/>
+
+
+
       </div>
+
     );
   }
 }

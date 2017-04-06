@@ -2,16 +2,11 @@
 #mainheader {
     height: 70px;
     border-radius: 0px;
-    border-color: darkgreen;
 }
 
 #mijnaccountknop {
-    background-color: black;
+    background-color: #222;
     color: cadetblue;
-}
-#mijnaccountknop:hover {
-    background-color: white;
-
 }
 
 #header1 {
@@ -79,4 +74,7 @@
     color: floralwhite;
     border-color: green;
     border-radius: 3px;
+}
+#blogs {
+    background: #222;
 }
