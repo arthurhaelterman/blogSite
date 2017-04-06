@@ -5,15 +5,16 @@ import cover from '../../public/images/coverphoto.jpg'
 import weedphoto from '../../public/images/weed.jpg'
 import React, { Component } from 'react';
 import {Carousel}  from 'react-bootstrap/lib/'
+import './SlideImages.css'
 
 
 class Slideimages extends Component {
 
     render() {
         return (
-            <div id="Carousel" class="carousel" >
+            <div id="Carousel" class="carousel">
                 <Carousel>
-                    <Carousel.Item align="center">
+                    <Carousel.Item>
                         <img  alt="1" src={cover}/>
                     </Carousel.Item>
                     <Carousel.Item>

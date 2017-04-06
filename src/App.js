@@ -3,7 +3,6 @@ import './App.css';
 import BlogList from './containers/BlogList'
 import * as JsonService from "./service/JsonService";
 import Header from './containers/Header';
-import Image from 'react-bootstrap';
 import SlideImages from './containers/SlideImages';
 
 
