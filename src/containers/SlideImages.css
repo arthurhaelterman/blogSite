@@ -1,9 +1,82 @@
-
+/* Style voor header en de carousel */
 #mainheader {
     height: 70px;
-
-}
-#mainheader:hover {
-    color: purple;
+    border-radius: 0px;
+    border-color: darkgreen;
 }
 
+
+#mijnaccountknop {
+    background-color: black;
+    color: cadetblue;
+}
+#mijnaccountknop:hover {
+    background-color: white;
+}
+
+#header1 {
+    font-size: 34px;
+    padding-left: 0px;
+    margin-left: -71px;
+    border-bottom: 1px solid white;
+    margin-right: 5px;
+}
+#header2 {
+    font-size: 17px;
+    border-bottom: 1px solid white;
+    padding-top: 14px;
+    margin-right: 5px;
+}
+#header3 {
+    font-size: 17px;
+    border-bottom: 1px solid white;
+    padding-top: 14px;
+    margin-right: 5px;
+}
+#header4 {
+    font-size: 17px;
+    border-bottom: 1px solid white;
+    padding-top: 14px;
+    margin-right: 5px;
+}
+#header5 {
+    font-size: 17px;
+    border-bottom: 1px solid white;
+    padding-top: 14px;
+    margin-right: 5px;
+}
+#header6 {
+    font-size: 17px;
+    border-bottom: 1px solid white;
+    padding-top: 14px;
+    margin-right: 5px;
+}
+#header1:hover {
+    color: floralwhite;
+    border-color: green;
+    border-radius: 3px;
+}
+#header2:hover {
+    color: floralwhite;
+    border-color: green;
+    border-radius: 3px;
+}#header3:hover {
+     color: floralwhite;
+     border-color: green;
+     border-radius: 3px;
+ }
+#header4:hover {
+    color: floralwhite;
+    border-color: green;
+    border-radius: 3px;
+}
+#header5:hover {
+    color: floralwhite;
+    border-color: green;
+    border-radius: 3px;
+}
+#header6:hover {
+    color: floralwhite;
+    border-color: green;
+    border-radius: 3px;
+}

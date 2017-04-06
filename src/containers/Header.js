@@ -4,8 +4,9 @@
 
 import React, { Component } from 'react';
 import {Navbar, Nav, NavItem, Modal, Button,MenuItem,NavDropdown,FormGroup,FormControl}  from 'react-bootstrap/lib/'
+import accounticoon from '../../public/images/accounticoon.png'
 
-
+/* Header van de site */
 class Header extends Component {
 
     render() {
@@ -13,23 +14,29 @@ class Header extends Component {
                 <Navbar inverse collapseOnSelect fixedTop={true} id="mainheader">
                         <Navbar.Header>
                             <Navbar.Brand>
-                                <a href="#">Thomas blog</a>
+                                <a id="header1" href="#">Blog of life</a>
                             </Navbar.Brand>
                             <Navbar.Toggle />
                         </Navbar.Header>
                         <Navbar.Collapse>
                             <Nav>
-                                <NavItem  href="#">Afvallen</NavItem>
-                                <NavItem  href="#">Drugs</NavItem>
+                                <NavItem id="header2" href="#">Weight loss</NavItem>
+                                <NavItem id="header3" href="#">Drugs</NavItem>
+                                <NavItem id="header4" href="#">Sex</NavItem>
+                                <NavItem id="header5" href="#">FAQ</NavItem>
+                                <NavItem id="header6" href="#">Contact</NavItem>
                             </Nav>
                             <Nav pullRight>
-                                <NavItem eventKey={1} href="#">Link Right</NavItem>
-                                <NavItem eventKey={2} href="#"><FormGroup>
-                                    <FormControl type="text" placeholder="Search" />
-                                </FormGroup></NavItem>
+                                <NavItem eventKey={1} href="#" id="mijnaccountknop">
+                                    <button type="button">
+                                        <img src={accounticoon}></img>My account</button>
+                                    </NavItem>
+                                <NavItem eventKey={2} href="#">
+                                    <FormGroup>
+                                        <FormControl type="text" placeholder="Search" />
+                                    </FormGroup></NavItem>
                             </Nav>
                         </Navbar.Collapse>
-                    );
                 </Navbar>
         );
     }
