@@ -12,27 +12,32 @@ class App extends Component {
   constructor(){
       super();
       this.state = {
-          blogs: JsonService.getBlogsDummy().blogs
+          blogs: JsonService.getBlogsDummy().blogs,
+          blogShow:false
       }
   }
 
   load(){
-      return JsonService.getBlogsDummy();
+      return JsonService.getBlogsDummy().blogs;
   }
 
   welcomebuttonclick(){
-      document.getElementById("carousel").style.display = "none";
-      document.getElementById("welcometext").style.display = "none";
-      document.getElementById("blogs").style.display = "inline";
+      var children=document.getElementById("body").children;
+      for(var i = 0; i < children.length; i++){
+          children[i].style.display = "none";
+      }
+      this.setState({blogShow: true})
   }
 
   render() {
     return (
-      <div className="App">
+      <div id="App" className="App">
         <Header/>
+          <div id="body">
         <SlideImages/>
         <Welcome click={this.welcomebuttonclick.bind(this)}/>
-        <BlogList load={this.load.bind(this)} blogs={this.state.blogs}/>
+        <BlogList show={this.state.blogShow} load={this.load.bind(this)} blogs={this.state.blogs}/>
+              </div>
       </div>
 
     );

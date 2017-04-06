@@ -3,7 +3,7 @@
  */
 
 export function getBlogs() {
-    var path = '/api/blogs';
+    var path = 'http://localhost:8080/api/blog/';
     fetch( path, {
         method: 'GET',
         headers: {
@@ -12,6 +12,7 @@ export function getBlogs() {
         },
     }).then((response) => {
         console.log("succes! " + response);
+        return response;
     }).catch((error) => {
         console.error("Unable to retrieve blogs " + path);
         console.error(error);

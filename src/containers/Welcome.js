@@ -19,8 +19,6 @@ class Welcome extends Component {
                 <p>Im an interesting guy , here I release my thoughts in your brain.</p>
                 <p><Button id="welcomebutton" onClick={this.props.click}>Thoughts</Button></p>
             </Jumbotron>
-
-
         );
     }
 }
