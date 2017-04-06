@@ -15,14 +15,16 @@ class App extends Component {
           blogs: JsonService.getBlogsDummy().blogs
       }
   }
+
+  load(){
+      return JsonService.getBlogs();
+  }
+
   render() {
     return (
       <div className="App">
       <Header/>
         <SlideImages/>
-
-
-
         <BlogList blogs={this.state.blogs}/>
       </div>
     );

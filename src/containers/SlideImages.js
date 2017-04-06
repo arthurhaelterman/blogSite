@@ -12,7 +12,7 @@ class Slideimages extends Component {
 
     render() {
         return (
-            <div id="Carousel" class="carousel">
+            <div id="carousel" className="carousel">
                 <Carousel>
                     <Carousel.Item>
                         <img  alt="1" src={cover}/>
@@ -21,10 +21,6 @@ class Slideimages extends Component {
                         <img  alt="2" src={weedphoto}/>
                     </Carousel.Item>
                 </Carousel>
-                );
-
-
-
             </div>
 
 

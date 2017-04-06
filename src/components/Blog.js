@@ -13,14 +13,16 @@ class Blog extends Component {
     }
 
     render() {
+        var categories = "";
+        {
+            this.state.blog.categories.map(function (category) {
+                return categories += + "#" + category + " "
+            }, this)
+        }
         return (
             <div id={this.state.blog.title}>
                 <p>{this.state.blog.title}</p>
-                {
-                    this.state.blog.categories.map(function (category) {
-                        return <p key={category}>{category}</p>
-                    }, this)
-                }
+                <p>{categories}</p>
                 <div>
 
                 </div>
