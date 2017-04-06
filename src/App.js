@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import cover from '../public/images/coverphoto.jpg'
 import BlogList from './containers/BlogList'
 import * as JsonService from "./service/JsonService";
+import Header from './containers/Header';
+import Image from 'react-bootstrap';
+
+
 
 
 class App extends Component {
@@ -16,10 +20,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
+        <Header/>
+              <img src={cover} />
         <BlogList blogs={this.state.blogs}/>
       </div>
     );
