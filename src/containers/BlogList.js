@@ -16,7 +16,7 @@ class BlogList extends Component {
             }, this)
         }
         return (
-            <div id="blogs">
+            <div id="blogs" style={{display:"none"}}>
                 <InfiniteScroll
                     pageStart={0}
                     loadMore={this.props.load}

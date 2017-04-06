@@ -9,12 +9,18 @@ import accounticoon from '../../public/images/accounticoon.png'
 /* Header van de site */
 class Header extends Component {
 
+    showWelcome(){
+        document.getElementById("carousel").style.display = "inline";
+        document.getElementById("welcometext").style.display = "inline";
+        document.getElementById("blogs").style.display = "none";
+    }
+
     render() {
         return (
                 <Navbar inverse collapseOnSelect fixedTop={true} id="mainheader">
                         <Navbar.Header>
                             <Navbar.Brand>
-                                <a id="header1" href="#">Blog of life</a>
+                                <a id="header1" onClick={this.showWelcome}>Blog of life</a>
                             </Navbar.Brand>
                             <Navbar.Toggle />
                         </Navbar.Header>
