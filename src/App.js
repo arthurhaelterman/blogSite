@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import cover from '../public/images/coverphoto.jpg'
 import BlogList from './containers/BlogList'
 import * as JsonService from "./service/JsonService";
 import Header from './containers/Header';
 import Image from 'react-bootstrap';
+import SlideImages from './containers/SlideImages';
 
 
 
@@ -16,12 +16,14 @@ class App extends Component {
           blogs: JsonService.getBlogsDummy().blogs
       }
   }
-
   render() {
     return (
       <div className="App">
-        <Header/>
-              <img src={cover} />
+      <Header/>
+        <SlideImages/>
+
+
+
         <BlogList blogs={this.state.blogs}/>
       </div>
     );
