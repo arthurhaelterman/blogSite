@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import {Navbar, Nav, NavItem, Modal, Button,MenuItem,NavDropdown}  from 'react-bootstrap/lib/'
+import {Navbar, Nav, NavItem, Modal, Button,MenuItem,NavDropdown,FormGroup,FormControl}  from 'react-bootstrap/lib/'
 
 
 class Header extends Component {
@@ -24,9 +24,12 @@ class Header extends Component {
                             </Nav>
                             <Nav pullRight>
                                 <NavItem eventKey={1} href="#">Link Right</NavItem>
-                                <NavItem eventKey={2} href="#">Link Right</NavItem>
+                                <NavItem eventKey={2} href="#"><FormGroup>
+                                    <FormControl type="text" placeholder="Search" />
+                                </FormGroup></NavItem>
                             </Nav>
                         </Navbar.Collapse>
+                    );
                 </Navbar>
         );
     }

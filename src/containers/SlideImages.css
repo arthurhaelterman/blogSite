@@ -1,2 +1,9 @@
 
+#mainheader {
+    height: 70px;
+
+}
+#mainheader:hover {
+    color: purple;
+}
 
