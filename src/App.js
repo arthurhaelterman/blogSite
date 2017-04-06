@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   load(){
-      return JsonService.getBlogs();
+      return JsonService.getBlogsDummy();
   }
 
   render() {
@@ -25,7 +25,7 @@ class App extends Component {
       <div className="App">
       <Header/>
         <SlideImages/>
-        <BlogList blogs={this.state.blogs}/>
+        <BlogList load={this.load.bind(this)} blogs={this.state.blogs}/>
       </div>
     );
   }

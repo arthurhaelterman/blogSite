@@ -2,6 +2,8 @@
  * Created by Arthur Haelterman on 5/04/2017.
  */
 import React, { Component } from 'react';
+import './Blog.css'
+import {Grid, Row, Col} from 'react-bootstrap/lib'
 
 class Blog extends Component {
 
@@ -20,13 +22,13 @@ class Blog extends Component {
             }, this)
         }
         return (
-            <div id={this.state.blog.title}>
-                <p>{this.state.blog.title}</p>
-                <p>{categories}</p>
-                <div>
+        <Grid>
+            <Row>
+                <h1>{this.state.blog.title}</h1>
+            </Row>
 
-                </div>
-            </div>
+
+        </Grid>
         );
     }
 }
