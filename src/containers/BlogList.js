@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import Blog from '../components/Blog';
 import InfiniteScroll from 'react-infinite-scroller';
-import {Fade,Well} from 'react-bootstrap';
+import {Collapse,Well} from 'react-bootstrap';
 
 class BlogList extends Component {
 
@@ -16,22 +16,17 @@ class BlogList extends Component {
                 items.push( <Blog key={blog.id} blog={blog}/>)
             }, this)
         }
+
         return (
-            <Fade in={this.props.show}>
-                <Well>
-            <div id="blogs">
-                <InfiniteScroll
-                    pageStart={0}
-                    loadMore={this.props.load}
-                    hasMore={true || false}
-                    loader={<div className="loader">Loading ...</div>}>
-                    {items}
-                </InfiniteScroll>
-
-            </div>
-                    </Well>
-                </Fade>
-
+                    <div id="blogs">
+                        <InfiniteScroll
+                            pageStart={0}
+                            loadMore={this.props.load}
+                            hasMore={true || false}
+                            loader={<div className="loader"></div>}>
+                            {items}
+                        </InfiniteScroll>
+                    </div>
         );
     }
 }

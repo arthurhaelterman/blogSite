@@ -5,6 +5,7 @@ import * as JsonService from "./service/JsonService";
 import Header from './containers/Header';
 import SlideImages from './containers/SlideImages';
 import Welcome from './containers/Welcome';
+import {Fade,Well} from 'react-bootstrap/lib'
 
 
 
@@ -13,7 +14,9 @@ class App extends Component {
       super();
       this.state = {
           blogs: JsonService.getBlogsDummy().blogs,
-          blogShow:false
+          blogShow:false,
+          welcomeShow:true,
+          createBlogShow:false
       }
   }
 
@@ -21,25 +24,32 @@ class App extends Component {
       return JsonService.getBlogsDummy().blogs;
   }
 
-  welcomebuttonclick(){
-      var children=document.getElementById("body").children;
-      for(var i = 0; i < children.length; i++){
-          children[i].style.display = "none";
-      }
-      this.setState({blogShow: true})
+  welcomeButtonClick(){
+      this.setState({blogShow: true,welcomeShow:false})
   }
 
+    titleClick(){
+        this.setState({blogShow: false,welcomeShow:true})
+    }
+
   render() {
+      var blogs;
+      var welcome;
+      if(this.state.blogShow ===  true){
+          blogs = <BlogList show={this.state.blogShow} load={this.load.bind(this)} blogs={this.state.blogs}/>
+      }
+      if(this.state.welcomeShow === true){
+          welcome = <div id="welcome">
+              <SlideImages/>
+              <Welcome click={this.welcomeButtonClick.bind(this)}/>
+          </div>
+      }
     return (
       <div id="App" className="App">
-        <Header/>
-          <div id="body">
-        <SlideImages/>
-        <Welcome click={this.welcomebuttonclick.bind(this)}/>
-        <BlogList show={this.state.blogShow} load={this.load.bind(this)} blogs={this.state.blogs}/>
-              </div>
+        <Header click={this.titleClick.bind(this)}/>
+          {welcome}
+          {blogs}
       </div>
-
     );
   }
 }
