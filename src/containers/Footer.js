@@ -8,45 +8,61 @@ import instagramicon from '../../public/images/instagram icon.png'
 import tumblricon from '../../public/images/tumblricon.png'
 import youtubeicon from '../../public/images/youtubeicon.png'
 import twittericon from '../../public/images/twittericon.png'
+import {Navbar, Nav, NavItem, Modal, Button,MenuItem,NavDropdown,FormGroup,FormControl}  from 'react-bootstrap/lib/'
+
+
 class Footer extends Component {
 
     render() {
         return (
-            <footer>
-                <table>
-                    <tr id="tablerow1">
-                        <td>Social Media</td>
-                        <td>Contact us</td>
-                        <td>About us</td>
-                    </tr>
-                    <tr id="tablerow2">
-                        <td>Facebook<a href="#"><img id="facebookiconfooter" src={facebookicon}></img></a></td>
-                        <td>Mail</td>
-                        <td>Who are we?</td>
-                    </tr>
-                    <tr id="tablerow3">
-                        <td>Instagram<a href="#"><img id="instagramiconfooter" src={instagramicon}></img></a></td>
-                        <td>Telephone</td>
-                        <td>Our story</td>
-                    </tr>
-                    <tr id="tablerow4">
-                        <td>Twitter<a href="#"><img id="twittericonfooter" src={twittericon}></img></a></td>
-                        <td>Come to our office</td>
-                        <td>Disclaimers</td>
-                    </tr>
-                    <tr>
-                        <td>Tumblr<a href="#"><img id="tumblriconfooter" src={tumblricon}></img></a></td>
-                        <td>Contact for business</td>
-                        <td>Ca$h me outside</td>
-                    </tr>
-                    <tr>
-                        <td>Youtube<a href="#"><img id="youtubeiconfooter" src={youtubeicon}></img></a></td>
-                        <td>Complaints</td>
-                        <td>Donate(not needed but much appreciated!)</td>
-                    </tr>
-                </table>
-                <p id="copyrightfooter">&copy; Blog of life</p>
-           </footer>
+            <div id="footer">
+                <Navbar inverse>
+                    <Navbar.Header>
+                        <Navbar.Brand>
+                            <a href="#" id="footerhome">HOME</a>
+                        </Navbar.Brand>
+                        <Navbar.Toggle/>
+                    </Navbar.Header>
+                    <Navbar.Brand>
+                        <a href="#" id="footerfacebook">FACEBOOK</a>
+                    </Navbar.Brand>
+                    <Navbar.Toggle/>
+                    <Navbar.Brand>
+                        <a href="#" id="footerblog">BLOG</a>
+                    </Navbar.Brand>
+                    <Navbar.Toggle/>
+                    <Navbar.Header>
+                        <Navbar.Brand>
+                            <a href="#" id="footercontact">CONTACT</a>
+                        </Navbar.Brand>
+                        <Navbar.Toggle/>
+                    </Navbar.Header>
+                    <Navbar.Header>
+                        <Navbar.Brand>
+                            <a href="#">FAQ</a>
+                        </Navbar.Brand>
+                        <Navbar.Toggle/>
+                    </Navbar.Header>
+                    <Navbar.Collapse>
+                        <Navbar.Form pullRight>
+                            <Navbar.Header>
+                                <Navbar.Brand>
+                                    <a href="#">Get the latest Blogs!</a>
+                                </Navbar.Brand>
+                                <Navbar.Toggle/>
+                            </Navbar.Header>
+                            <FormGroup>
+                                <FormControl type="text" placeholder="Type your email adress" />
+                            </FormGroup>
+                            {' '}
+                            <Button type="submit">Submit</Button>
+                        </Navbar.Form>
+                    </Navbar.Collapse>
+
+                </Navbar>
+
+
+            </div>
 
 
 

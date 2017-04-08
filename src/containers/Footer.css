@@ -1,42 +1,8 @@
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 12px;
-    padding: 15px;
-    margin: 15px;
-
+#footer {
+    background-color: #222;
+    font-weight: bold;
+    font-size: 30px;
 }
-
-#copyrightfooter {
-
-    padding-top: 10px;
-    color: white;
-    font-size: 13px;
-}
-#tablerow1 {
-    font-size: 17px;
-}
-td:hover {
-    color: green;
-}
-td {
-    margin: 7px;
-}
-#facebookiconfooter {
-    padding-left: 4px;
-}
-#youtubeiconfooter {
-    padding-left: 4px;
-}
-#tumblriconfooter {
-    padding-left: 4px;
-}
-#twittericonfooter {
-    padding-left: 4px;
-}
-#instagramiconfooter {
-    padding-left: 4px;
+#footercontact:hover {
+    color: lightgrey;
 }

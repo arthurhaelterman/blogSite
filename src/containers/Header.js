@@ -15,7 +15,7 @@ class Header extends Component {
 
     render() {
         return (
-                <Navbar inverse collapseOnSelect id="mainheader">
+                <Navbar fixedTop inverse collapseOnSelect id="mainheader">
                         <Navbar.Header>
                             <Navbar.Brand>
                                 <a id="header1" onClick={this.props.click}>Blog of life</a>

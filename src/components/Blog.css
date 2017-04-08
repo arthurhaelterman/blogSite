@@ -1,18 +1,19 @@
 
-#header {
-    background-color: #222;
-    color:white;
+.panel {
+    width: 800px;
+    margin-left: 500px;
+    font-family: Calibri;
 }
 
 .panel-body {
-       background-color: #222;
-        color:white;
-        border: 2px solid white;
+        background-color: aliceblue;
+        color: #222;
+        border: 2px #4b7b4b;
         border-radius:5px;
+        display: inline-block;
 }
 .panel-heading{
-    background-color: #222;
-    color:white;
+    font-size: 20px;
 }
 .panel-default{
     background-color: #222;

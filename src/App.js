@@ -54,21 +54,17 @@ class App extends Component {
               <SlideImages/>
               <Welcome click={this.welcomeButtonClick.bind(this)}/>
           </div>
+      }
+
 
           /* Shows div to create blog */
-          if (this.state.createBlogShow === true) {
-              createBlog = <div>
-                      <Createblog/>
-                      </div>
-
-          }
-
-
-
+      if(this.state.createBlogShow === true) {
+              createBlog = <Createblog/>
       }
     return (
     <div id="App" className="App">
           <Header click={this.titleClick.bind(this)}/>
+
             {createBlog}
             {welcome}
             {blogs}
