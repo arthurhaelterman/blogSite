@@ -7,8 +7,6 @@ import {Navbar, Nav, NavItem, Modal, Button,MenuItem,NavDropdown,FormGroup,FormC
 import accounticoon from '../../public/images/accounticoon.png'
 import plussign from '../../public/images/plus sign.png'
 import Createblog from "./Createblog";
-import { Route, RouteHandler, Link } from 'react-router-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 
 /* Header van de site */
 class Header extends Component {
@@ -31,9 +29,7 @@ class Header extends Component {
                                 <NavItem id="header4" href="#">Sex</NavItem>
                                 <NavItem id="header5" href="#">FAQ</NavItem>
                                 <NavItem id="header6" href="#">Contact</NavItem>
-                                <LinkContainer to="Createblogpost">
                                     <NavItem id="Header7"><Button bsStyle="primary" id="createblogbutton" onClick={this.props.click}><img id="header7" src={plussign}></img></Button></NavItem>
-                                </LinkContainer>
                             </Nav>
                             <Nav pullRight>
                                 <NavItem eventKey={1} href="#" id="mijnaccountknop">

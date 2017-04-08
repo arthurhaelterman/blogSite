@@ -1,14 +1,19 @@
-.blog{
-    border: 5px solid;
-    border-radius:20px;
-    padding: 30px;
 
+#header {
+    background-color: #222;
+    color:white;
 }
-#blogs {
-    margin-right: 50px;
-    margin-left: 50px;
-    background-color: purple;
-}
+
 .panel-body {
-       background-color: lightsteelblue;
+       background-color: #222;
+        color:white;
+        border: 2px solid white;
+        border-radius:5px;
+}
+.panel-heading{
+    background-color: #222;
+    color:white;
+}
+.panel-default{
+    background-color: #222;
 }

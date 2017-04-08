@@ -30,7 +30,7 @@ class App extends Component {
 
 
   welcomeButtonClick(){
-      this.setState({blogShow: true,welcomeShow:false,createBlogShow:true})
+      this.setState({blogShow: true,welcomeShow:false,createBlogShow:false})
   }
 
 
@@ -50,14 +50,14 @@ class App extends Component {
 
           /* Standard site */
       if(this.state.welcomeShow === true){
-          welcome = <div id="welcome">
+          welcome = <div>
               <SlideImages/>
               <Welcome click={this.welcomeButtonClick.bind(this)}/>
           </div>
 
           /* Shows div to create blog */
           if (this.state.createBlogShow === true) {
-              createBlog = <div id="createblogs">
+              createBlog = <div>
                       <Createblog/>
                       </div>
 

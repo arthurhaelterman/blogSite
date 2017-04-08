@@ -21,8 +21,9 @@ class Blog extends Component {
                 return categories += + "#" + category + " "
             }, this)
         }
+
         return (
-        <Panel id="blogs" header={this.state.blog.title} bsStyle="primary">
+        <Panel id="blog" header={this.state.blog.title} >
             TLDR: Bank of America is a horrible business and it should be ashamed by how bad it is.
             Two weeks ago, I suddenly received emails informing me that my Bank of America account was overdrawn. Confused, I logged onto my online banking account to discover that all my money (more than $3,400) had disappeared from both my saving and checking accounts. Not only were the balances stripped clean, I had outstanding fees and my checking account had gone negative as a result. My heart sank and my first thought was that my personal computer had been compromised somehow. What actually happened turned out to be in some ways worse and this is the story of how I found myself in an absurdist bureaucratic nightmare straight out of the movie Brazil. Best of all, it’s almost entirely Bank of America’s fault. This is the story of how I pieced it all together.
             A closer examination of my bank statements revealed that I had received two legal orders. These are writs of executions issued by a court to collect monetary judgments and fines. Immediately, this two innocuous lines told me that I was not the victim of hacking. However, the mystery only deepened. Since I have never been party to a law suit, this was puzzling. Surely it had to be a mistake?
