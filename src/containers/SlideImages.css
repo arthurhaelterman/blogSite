@@ -46,6 +46,12 @@
     padding-top: 14px;
     margin-right: 5px;
 }
+#header7 {
+    padding-top: 6px;
+    margin-top: -15px;
+    margin-right: 3px;
+    margin-bottom: -6px;
+}
 #header1:hover {
     color: floralwhite;
     border-color: green;
@@ -77,4 +83,10 @@
 }
 #blogs {
     background: #222;
+}
+
+#Makeblog {
+   background-color: #222;
+    color: #222;
+    margin-top: -8px;
 }

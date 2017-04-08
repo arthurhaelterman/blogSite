@@ -9,6 +9,7 @@ import './SlideImages.css'
 import deman from '../../public/images/hitler.jpg'
 import newyorkcityskyline from '../../public/images/newyorkcity.jpg'
 
+
 /* Code voor carousel */
 
 class Slideimages extends Component {
@@ -24,7 +25,7 @@ class Slideimages extends Component {
                         <img  alt="2" src={weedphoto}/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img  alt="3" src={deman}/>
+                                <img  alt="3" src={deman}></img>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img alt="4" src={newyorkcityskyline}/>

@@ -2,5 +2,13 @@
     border: 5px solid;
     border-radius:20px;
     padding: 30px;
-    background-color:black;
+
+}
+#blogs {
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: purple;
+}
+.panel-body {
+       background-color: lightsteelblue;
 }

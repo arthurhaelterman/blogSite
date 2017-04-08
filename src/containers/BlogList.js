@@ -4,7 +4,6 @@
 import React, { Component } from 'react';
 import Blog from '../components/Blog';
 import InfiniteScroll from 'react-infinite-scroller';
-import {Collapse,Well} from 'react-bootstrap';
 
 class BlogList extends Component {
 
@@ -16,6 +15,7 @@ class BlogList extends Component {
                 items.push( <Blog key={blog.id} blog={blog}/>)
             }, this)
         }
+
 
         return (
                     <div id="blogs">
