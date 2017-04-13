@@ -1,0 +1,20 @@
+#pageheader {
+    text-align: left;
+    color: white;
+    margin-left: 315px;
+}
+#createblogtitle {
+    color:white;
+    width: 700px;
+    margin-left: 700px;
+
+}
+#createblogtext {
+    color:white;
+    width: 700px;
+    margin-left: 700px;
+
+}
+#submitbutton {
+    margin-bottom: 400px;
+}

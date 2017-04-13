@@ -16,7 +16,7 @@ class Footer extends Component {
     render() {
         return (
             <div id="footer">
-                <Navbar inverse>
+                <Navbar inverse collapseOnSelect>
                     <Navbar.Header>
                         <Navbar.Brand>
                             <a href="#" id="footerhome">HOME</a>
@@ -55,17 +55,11 @@ class Footer extends Component {
                                 <FormControl type="text" placeholder="Type your email adress" />
                             </FormGroup>
                             {' '}
-                            <Button type="submit">Submit</Button>
+                            <Button type="submit" id="footerbutton">Submit</Button>
                         </Navbar.Form>
                     </Navbar.Collapse>
-
                 </Navbar>
-
-
             </div>
-
-
-
         );
     }
 }

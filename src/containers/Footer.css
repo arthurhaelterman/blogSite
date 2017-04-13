@@ -6,3 +6,12 @@
 #footercontact:hover {
     color: lightgrey;
 }
+#blogfooter {
+    background-color: #222;
+    font-weight: bold;
+    font-size: 30px;
+}
+#footerbutton {
+    margin-top: 3px;
+}
+

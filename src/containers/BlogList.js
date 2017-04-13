@@ -27,6 +27,7 @@ class BlogList extends Component {
                             {items}
                         </InfiniteScroll>
                     </div>
+
         );
     }
 }
