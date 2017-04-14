@@ -7,26 +7,40 @@ import {Panel,Button,FormGroup,ControlLabel,FormControl,HelpBlock,FieldGroup}  f
 import '../containers/SlideImages.css'
 import {PageHeader,Modal,ModalHeader,ModalBody,ModalTitle,ModalFooter,} from 'react-bootstrap'
 import './CreateBlog.css'
+import * as JsonService from "../service/JsonService";
 
 
 class CreateBlog extends Component {
     constructor(){
         super();
         this.state = {
-           title: "",
-           text:false,
+           title:"",
+           content:"",
            submitbutton:false,
+            titleValidationState:"",
+            titleValid:false
 
         }
     }
-    getValidationState(title) {
-        const length = this.state.title.length;
-        if (length > 10) title = 'success';
-        else if (length > 5) title = 'warning';
-        else if (length > 0) title = 'error';
+
+    blogTitleChange(event) {
+        const titleLength = event.target.value.length;
+        if (titleLength > 5){
+            this.setState({title: event.target.value,titleValidationState: 'success',titleValid:true });
+        }
+        else if (titleLength <= 5){
+            this.setState({title: event.target.value,titleValidationState:'error',titleValid:false });
+        }
+
     }
-    handleChange(title) {
-        this.setState({ value: this.title.target.value });
+
+    blogContentChange(event) {
+        this.setState({content: event.target.value})
+    }
+
+    post(){
+        var blog = JSON.stringify({title:this.state.title, content:this.state.content});
+        alert(blog);
     }
 
 
@@ -34,12 +48,12 @@ class CreateBlog extends Component {
         return (
             <div>
             <div id="header">
-                <PageHeader id="pageheader">Create a new blog!<br/> <small>Hi, this is were you create your blog. Its pretty self explanetory.<br/>Enjoy</small></PageHeader>
+                <PageHeader id="pageheader">Create a new blog!<br/> <small>Hi, this is were you create your blog. Its pretty self explanatory.<br/>Enjoy</small></PageHeader>
             </div>
                 <form id="createblogtitle">
                     <FormGroup
                         controlId="formBasicText"
-                        validationState={this.getValidationState()}
+                        validationState={this.state.titleValidationState}
                         bsSize="large"
                     >
                         <ControlLabel>Enter title of the blog</ControlLabel>
@@ -47,18 +61,18 @@ class CreateBlog extends Component {
                             type="text"
                             value={this.state.title}
                             placeholder="Enter text"
-                            onChange={this.handleChange}
+                            onChange={this.blogTitleChange.bind(this)}
                         />
                     </FormGroup>
                 </form>
                 <form id="createblogtext">
                     <FormGroup
-                        controlId="formControlsTextarea"
+                        controlId="formControlTextarea"
                          bsSize="large">
                         <ControlLabel>Please enter the content of your blog below!</ControlLabel>
-                        <FormControl componentClass="textarea" placeholder="textarea" />
+                        <FormControl componentClass="textarea" placeholder="textarea" onChange={this.blogContentChange.bind(this)} />
                     </FormGroup>
-                    <Button type="submit" id="submitbutton">
+                    <Button onClick={this.post.bind(this)} id="submitbutton">
                         Submit
                     </Button>
                 </form>

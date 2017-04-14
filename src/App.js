@@ -26,14 +26,12 @@ class App extends Component {
   }
 
   createBlogClick () {
-          this.setState ({blogShow:false,welcomeShow:false,createBlogShow:true,loginShow: false})
+      this.setState ({blogShow:false,welcomeShow:false,createBlogShow:true,loginShow: false})
   }
-
 
   welcomeButtonClick() {
       this.setState({blogShow: true,welcomeShow:false,createBlogShow:false,loginShow: false})
   }
-
 
     titleClick() {
         this.setState({blogShow: false,welcomeShow:true,createBlogShow:false,loginShow: false})

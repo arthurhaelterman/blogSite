@@ -29,7 +29,7 @@ class Header extends Component {
                                 <NavItem id="header4" href="#">Life</NavItem>
                                 <NavItem id="header5" href="#">FAQ</NavItem>
                                 <NavItem id="header6" href="#">Contact</NavItem>
-                                    <NavItem id="Header7"><Button bsStyle="primary" id="createblogbutton" onClick={this.props.createclick}><img id="header7" src={plussign}></img></Button></NavItem>
+                                    <NavItem id="Header7"><Button bsStyle="primary" onClick={this.props.createclick}><img id="header7" src={plussign}></img></Button></NavItem>
                             </Nav>
                             <Nav pullRight>
                                 <NavItem eventKey={1} href="#" id="mijnaccountknop">
